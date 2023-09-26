@@ -1,6 +1,8 @@
 'use client'
+import { useThemeContext } from '@/context/ThemeContext'
 
-function Navbar({ toggleTheme }) {
+function Navbar() {
+  const { toggleTheme } = useThemeContext()
   return (
     <header>
       <nav>
