@@ -1,12 +1,6 @@
 import './globals.css'
-import { Barlow } from 'next/font/google'
 import ThemeContextProvider from '@/context/ThemeContext'
-
-const barlow = Barlow({
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
-})
+import { barlow } from '@/font/font'
 
 export const metadata = {
   title: 'Aaron Anama',

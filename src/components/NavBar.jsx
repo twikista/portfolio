@@ -1,19 +1,14 @@
 'use client'
 import Link from 'next/link'
-import ThemeToggler from './ThemeToggler'
-import { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
+import Toggler from './Toggler'
 
-function Navbar() {
-  const path = usePathname()
-  console.log(path)
+function NavBar() {
   const navItems = [
     { id: 1, item: 'home' },
     { id: 2, item: 'projects' },
     { id: 3, item: 'skills' },
     { id: 4, item: 'about' },
   ]
-
   return (
     <header className='w-full px-4 py-3 border-b border-b-solid md:py-5 lg:px-16 border-b-zinc-300 dark:border-b-zinc-700'>
       <nav className='flex justify-between items-center mx-auto max-w-[1380px]'>
@@ -25,31 +20,28 @@ function Navbar() {
         </h1>
 
         <div className='flex items-center gap-2 md:gap-10'>
-          {path !== '/' && (
-            <ul className='hidden grid-cols-4 gap-3 md:grid '>
-              {navItems.map((i) => (
-                <li
-                  key={i.id}
-                  className='flex items-center text-sm capitalize md:text-lg gap-[2px] justify-center border-solid border-[2px] border-zinc-500 dark:border-zinc-500 hover:bg-zinc-500 hover:text-zinc-100 px-2 rounded-[10px] py-[2px] dark:hover:border-zinc-500 dark:hover:bg-zinc-500 text-zinc-500 dark:text-zinc-500 font-semibold dark:hover:text-zinc-800 transition-all ease-in duration-200'
-                >
-                  <Link href='/'>{i.item}</Link>
-                </li>
-              ))}
-              {/* <li className='flex items-center text-sm apitalize md:text-lg gap-[2px] justify-center border-solid border-[2px] border-zinc-500 dark:border-zinc-700 hover:border-zinc-400 px-2 rounded-3xl py-[2px] dark:hover:border-zinc-500 dark:hover:bg-zinc-800 text-zinc-600 hover:text-zinc-500'>
+          <ul className='hidden grid-cols-4 gap-3 md:grid '>
+            {navItems.map((i) => (
+              <li
+                key={i.id}
+                className='flex items-center text-sm font-semibold capitalize md:text-lg gap-[2px] justify-center px-2 py-[2px] text-zinc-500 dark:text-zinc-400 hover:text-zinc-500 '
+              >
+                <Link href='/'>{i.item}</Link>
+              </li>
+            ))}
+            {/* <li className='flex items-center text-sm apitalize md:text-lg gap-[2px] justify-center border-solid border-[2px] border-zinc-500 dark:border-zinc-700 hover:border-zinc-400 px-2 rounded-3xl py-[2px] dark:hover:border-zinc-500 dark:hover:bg-zinc-800 text-zinc-600 hover:text-zinc-500'>
               <Link href='/'>home</Link>
             </li>
             <li>projects</li>
             <li>skill</li>
             <li>about</li> */}
-            </ul>
-          )}
-
+          </ul>
           <div className='flex gap-3'>
             <Link
               href='#'
-              className='flex font-semibold items-center text-sm capitalize md:text-lg gap-[2px] justify-center border-solid border-[2px] border-zinc-500 dark:border-zinc-500  hover:bg-zinc-500 hover:text-zinc-100 px-2 rounded-[10px] py-[2px] dark:hover:border-zinc-500 dark:hover:bg-zinc-500 text-zinc-500 dark:text-zinc-500  dark:hover:text-zinc-800 transition-all ease-in duration-200'
+              className='flex bg-neutral-200 dark:bg-neutral-700 items-center text-sm apitalize md:text-lg gap-[2px] justify-center px-2 rounded-3xl py-[2px] dark:hover:bg-zinc-800 text-zinc-500 dark:text-zinc-400 font-semibold hover:text-zinc-500'
             >
-              <span className='flex items-center'>
+              <span className='flex items-center text-zinc-500 dark:text-zinc-400'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   fill='none'
@@ -67,7 +59,7 @@ function Navbar() {
               </span>
               <span className='items-center hidden md:flex'>resume</span>
             </Link>
-            <ThemeToggler />
+            <Toggler />
           </div>
         </div>
       </nav>
@@ -75,4 +67,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default NavBar
