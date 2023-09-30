@@ -46,7 +46,9 @@ function Navbar() {
 
           <div className='flex gap-3'>
             <Link
-              href='#'
+              href='/Aaron_Anama_resume.pdf'
+              download='Aaron_Anama_Resume'
+              target='_blank'
               className='flex font-semibold items-center text-sm capitalize md:text-lg gap-[2px] justify-center border-solid border-[2px] border-zinc-500 dark:border-zinc-500  hover:bg-zinc-500 hover:text-zinc-100 px-2 rounded-[10px] py-[2px] dark:hover:border-zinc-500 dark:hover:bg-zinc-500 text-zinc-500 dark:text-zinc-500  dark:hover:text-zinc-800 transition-all ease-in duration-200'
             >
               <span className='flex items-center'>
