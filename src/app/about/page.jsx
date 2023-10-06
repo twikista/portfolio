@@ -1,7 +1,19 @@
-import React from 'react'
+import Container from '@/components/Container'
+import Navbar from '@/components/Navbar'
+import Main from '@/components/Main'
+import BottomNav from '@/components/BottomNav'
+import Footer from '@/components/Footer'
 
-function page() {
-  return <div>About page</div>
+function About() {
+  return (
+    <Container>
+      <Navbar />
+      <Main style='flex-1'>
+        <BottomNav />
+      </Main>
+      <Footer />
+    </Container>
+  )
 }
 
-export default page
+export default About
