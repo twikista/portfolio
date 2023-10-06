@@ -1,8 +1,8 @@
 'use client'
 import Link from 'next/link'
 import ThemeToggler from './ThemeToggler'
-import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+import Logo from './Logo'
 
 function Navbar() {
   const path = usePathname()
@@ -20,9 +20,11 @@ function Navbar() {
         {/* <div className='flex items-start justify-center w-10 h-10 text-3xl font-semibold border-b-8 border-purple-600 border-solid rounded-full text-zinc-200 dark:ext-purple-600 bg-zinc-900 dark:bg-white'>
           <h1 className='text-3xl font-semibold '>a_</h1>
         </div> */}
-        <h1 className='text-3xl font-semibold '>
-          A<span className=' text-zinc-600'>&#95;</span>
-        </h1>
+        <Link href='/'>
+          <Logo style='text-orange-600 dark:text-orange-600' />
+        </Link>
+
+        {/* <span /> */}
 
         <div className='flex items-center gap-2 md:gap-10'>
           {path !== '/' && (
@@ -30,7 +32,7 @@ function Navbar() {
               {navItems.map((i) => (
                 <li
                   key={i.id}
-                  className='flex items-center text-sm capitalize md:text-lg gap-[2px] justify-center border-solid border-[2px] border-zinc-500 dark:border-zinc-500 hover:bg-zinc-500 hover:text-zinc-100 px-2 rounded-[10px] py-[2px] dark:hover:border-zinc-500 dark:hover:bg-zinc-500 text-zinc-500 dark:text-zinc-500 font-semibold dark:hover:text-zinc-800 transition-all ease-in duration-200'
+                  className='flex items-center text-sm capitalize md:text-lg gap-[2px] justify-center border-solid border-[2px] border-zinc-500 dark:border-zinc-500 hover:bg-zinc-500 hover:text-zinc-100 px-2 rounded-[10px] py-[2px] dark:hover:border-zinc-400 dark:hover:bg-zinc-400 text-zinc-500 dark:text-zinc-500 font-semibold dark:hover:text-zinc-900 transition-all ease-in duration-200'
                 >
                   <Link href='/'>{i.item}</Link>
                 </li>
@@ -49,7 +51,7 @@ function Navbar() {
               href='/Aaron_Anama_resume.pdf'
               download='Aaron_Anama_Resume'
               target='_blank'
-              className='flex font-semibold items-center text-sm capitalize md:text-lg gap-[2px] justify-center border-solid border-[2px] border-zinc-500 dark:border-zinc-500  hover:bg-zinc-500 hover:text-zinc-100 px-2 rounded-[10px] py-[2px] dark:hover:border-zinc-500 dark:hover:bg-zinc-500 text-zinc-500 dark:text-zinc-500  dark:hover:text-zinc-800 transition-all ease-in duration-200'
+              className='flex font-semibold items-center text-sm capitalize md:text-lg gap-[2px] justify-center border-solid border-[2px] border-zinc-500 dark:border-zinc-500  hover:bg-zinc-500 hover:text-zinc-100 px-2 rounded-[10px] py-[2px] dark:hover:border-zinc-400 dark:hover:bg-zinc-400 text-zinc-500 dark:text-zinc-500  dark:hover:text-zinc-900 transition-all ease-in duration-200'
             >
               <span className='flex items-center'>
                 <svg
