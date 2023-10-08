@@ -44,16 +44,16 @@ function Projects() {
                     <p className='text-base text-zinc-600 dark:text-zinc-400 sm:text-base'>
                       {item.description}
                     </p>
-                    <article className='flex flex-wrap items-center gap-2'>
+                    <ul className='flex flex-wrap items-center gap-2'>
                       {item.technologies.map((tech, index) => (
-                        <span
+                        <li
                           key={index}
-                          className='rounded-3xl bg-zinc-500 text-zinc-100 dark:bg-zinc-700/70  px-2 text-xs flex items-center py-[1px]'
+                          className='rounded-3xl border border-solid border-zinc-400   px-2 text-xs flex items-center py-[1px]'
                         >
                           {tech}
-                        </span>
+                        </li>
                       ))}
-                    </article>
+                    </ul>
                     <div className='flex flex-col gap-2 mt-5 font-semibold sm:mt-1 sm:gap-4 sm:flex-row'>
                       <Link
                         href={item.demoUrl}
