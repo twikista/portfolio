@@ -12,43 +12,13 @@ export default function Home() {
     { id: 2, menuItem: 'about' },
     { id: 3, menuItem: 'contact' },
   ]
-  // const osTheme =
-  //   typeof window !== 'undefined' &&
-  //   matchMedia('(prefers-color-scheme:dark)').matches
-  // const userselectedTheme = localStorage.getItem('theme')
-  // const activeTheme = () =>
-  //   userselectedTheme === 'dark' || (!('theme' in localStorage) && osTheme)
-  //     ? 'dark'
-  //     : null
-  // const [theme, setTheme] = useState(activeTheme())
-
-  // const toggleTheme = () => {
-  //   console.log('clicked')
-  //   if (theme === 'dark') {
-  //     document.documentElement.classList.remove('dark')
-  //     setTheme(null)
-  //   } else {
-  //     document.documentElement.classList.add('dark')
-  //     setTheme('dark')
-  //   }
-  // }
-
-  // useLayoutEffect(() => {
-  //   if (theme === 'dark') {
-  //     document.documentElement.classList.add('dark')
-  //   } else {
-  //     document.documentElement.classList.remove('dark')
-  //   }
-  //   localStorage.setItem('theme', theme)
-  //   console.log(theme)
-  // }, [theme])
 
   return (
     <Container>
       <Navbar />
       <Main style='flex flex-col flex-1'>
-        <section className='flex justify-center flex-1 md:mt-0 md:items-center'>
-          <div className='flex flex-col items-center max-w-4xl py-8 mx-auto md:space-x-8 md:h-[400px] md:flex-row rounded-3xl dark:bg-transparent bg-transparent md:border-2 md:border-solid md:border-zinc-400 dark:md:border-zinc-700 px-0 md:px-6'>
+        <section className='flex justify-center flex-1 mt-14 sm:mt-0 md:items-center'>
+          <div className='flex flex-col items-center max-w-4xl py-8 mx-auto md:space-x-8 md:h-[400px] md:flex-row rounded-3xl dark:bg-transparent bg-transparent md:border-2 md:border-solid md:border-zinc-400 dark:md:border-zinc-700 px-3 md:px-6'>
             <Image
               src='/aaron.jpeg'
               width={320}
@@ -58,7 +28,7 @@ export default function Home() {
             />
             <Image
               src='/aaron.jpeg'
-              width={320}
+              width={280}
               height={240}
               alt="aaron's profile image"
               className='block shadow rounded-xl md:hidden'
@@ -81,13 +51,10 @@ export default function Home() {
                 <nav className='mt-4'>
                   <ul className='flex items-center justify-around gap-2 capitalize list-none'>
                     {menuItems.map((item) => (
-                      <li
-                        key={item.id}
-                        className='flex-1 text-base font-semibold transition-all duration-200 ease-linear border-2 border-solid rounded-[10px] shadow-sm dark:text-zinc-400 md:text-xl border-zinc-400 hover:border-zinc-500 hover:text-zinc-600 dark:border-zinc-700 dark:hover:border-zinc-400 dark:hover:text-zinc-300'
-                      >
+                      <li key={item.id} className='flex-1 '>
                         <Link
                           href={item.menuItem}
-                          className='flex items-center justify-center w-full px-4 py-2 sm:py-3'
+                          className='flex items-center justify-center w-full px-4 py-2 sm:py-3 text-base font-semibold hover:scale-95 transition-all duration-200 ease-linear border-2 border-solid rounded-[10px] shadow-sm text-zinc-400 dark:text-zinc-400 md:text-xl border-zinc-400 hover:border-zinc-500 hover:text-zinc-600 dark:border-zinc-700 dark:hover:border-zinc-400 dark:hover:text-zinc-300'
                         >
                           {item.menuItem}
                         </Link>

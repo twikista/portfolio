@@ -43,7 +43,7 @@ function ThemeToggler() {
           </svg>
         )}
       </div>
-      <div className='w-[18px] h-full flex-1 md:h-full bg-zinc-500 dark:bg-zinc-500' />
+      <div className='w-[18px] h-full flex-1 md:h-full bg-zinc-500 dark:bg-zinc-400' />
     </div>
   )
 }

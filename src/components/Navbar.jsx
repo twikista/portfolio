@@ -8,44 +8,33 @@ function Navbar() {
   const path = usePathname()
   console.log(path)
   const navItems = [
-    { id: 1, item: 'home' },
-    { id: 2, item: 'projects' },
-    { id: 3, item: 'skills' },
-    { id: 4, item: 'about' },
+    { id: 1, item: 'home', url: '/' },
+    { id: 2, item: 'projects', url: 'projects' },
+    { id: 3, item: 'about', url: 'about' },
+    { id: 4, item: 'contact', url: 'contact' },
   ]
 
   return (
     <header className='w-full px-4 py-3 border-b border-b-solid md:py-5 lg:px-16 border-b-zinc-300 dark:border-b-zinc-700'>
       <nav className='flex justify-between items-center mx-auto max-w-[1380px]'>
-        {/* <div className='flex items-start justify-center w-10 h-10 text-3xl font-semibold border-b-8 border-purple-600 border-solid rounded-full text-zinc-200 dark:ext-purple-600 bg-zinc-900 dark:bg-white'>
-          <h1 className='text-3xl font-semibold '>a_</h1>
-        </div> */}
         <Link href='/'>
           <Logo style='text-orange-600 dark:text-orange-600' />
         </Link>
-
-        {/* <span /> */}
-
         <div className='flex items-center gap-2 md:gap-10'>
           {path !== '/' && (
             <ul className='hidden grid-cols-4 gap-3 md:grid '>
               {navItems.map((i) => (
-                <li
-                  key={i.id}
-                  className='flex items-center text-sm capitalize md:text-lg gap-[2px] justify-center border-solid border-[2px] border-zinc-500 dark:border-zinc-500 hover:bg-zinc-500 hover:text-zinc-100 px-2 rounded-[10px] py-[2px] dark:hover:border-zinc-400 dark:hover:bg-zinc-400 text-zinc-500 dark:text-zinc-500 font-semibold dark:hover:text-zinc-900 transition-all ease-in duration-200'
-                >
-                  <Link href='/'>{i.item}</Link>
+                <li key={i.id}>
+                  <Link
+                    href={i.url}
+                    className='flex items-center text-sm capitalize md:text-lg gap-[2px] justify-center border-solid border-[2px] border-zinc-500 dark:border-zinc-500 hover:bg-zinc-500 hover:text-zinc-100 px-2 rounded-[10px] py-[2px] dark:hover:border-zinc-400 dark:hover:bg-zinc-400 text-zinc-500 dark:text-zinc-500 font-semibold dark:hover:text-zinc-900 transition-all ease-in duration-200 active:border-orange-400'
+                  >
+                    {i.item}
+                  </Link>
                 </li>
               ))}
-              {/* <li className='flex items-center text-sm apitalize md:text-lg gap-[2px] justify-center border-solid border-[2px] border-zinc-500 dark:border-zinc-700 hover:border-zinc-400 px-2 rounded-3xl py-[2px] dark:hover:border-zinc-500 dark:hover:bg-zinc-800 text-zinc-600 hover:text-zinc-500'>
-              <Link href='/'>home</Link>
-            </li>
-            <li>projects</li>
-            <li>skill</li>
-            <li>about</li> */}
             </ul>
           )}
-
           <div className='flex gap-3'>
             <Link
               href='/Aaron_Anama_resume.pdf'

@@ -6,8 +6,12 @@ const ThemeContext = createContext()
 function ThemeContextProvider({ children }) {
   const osTheme =
     typeof window !== 'undefined' &&
+    window.matchMedia &&
     matchMedia('(prefers-color-scheme:dark)').matches
-  const userTheme = localStorage.getItem('theme')
+  const userTheme =
+    typeof window !== 'undefined' &&
+    window.matchMedia &&
+    localStorage.getItem('theme')
 
   const activeTheme = () =>
     userTheme === 'dark' || (!('theme' in localStorage) && osTheme)
