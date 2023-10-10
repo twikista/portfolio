@@ -6,7 +6,6 @@ import Logo from './Logo'
 
 function Navbar() {
   const path = usePathname()
-  console.log(path)
   const navItems = [
     { id: 1, item: 'home', url: '/' },
     { id: 2, item: 'projects', url: 'projects' },

@@ -56,7 +56,7 @@ function About() {
         <h1 className='text-3xl font-bold text-center capitalize md:text-5xl dark:text-zinc-200'>
           About me
         </h1>
-        <section className='max-w-2xl mx-auto mt-4 space-y-8 text-sm text-justify md:mb-10 sm:text-lg'>
+        <section className='max-w-2xl mx-auto mt-4 mb-6 space-y-8 text-base md:mb-10 sm:text-lg'>
           <p>
             Hello, I am Aaron Anama, a frontend developer from Benin City,
             Nigeria. My initial contact with web development dates back to the
