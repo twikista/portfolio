@@ -4,14 +4,14 @@ import Image from 'next/image'
 import { useThemeContext } from '@/context/ThemeContext'
 
 function ThemeToggler() {
-  const { theme, toggleTheme } = useThemeContext()
+  const { isDarkMode, toggleTheme } = useThemeContext()
   return (
     <div
       onClick={toggleTheme}
       className={`cursor-pointer border-solid border-2 w-12 md:w-14 flex dark:flex-row-reverse items-center border-zinc-500 dark:border-zinc-500 rounded-[10px] gap-[2px] hover:border-zinc-400 dark:hover:border-zinc-500 dark:hover:bg-zinc-800 justify-between overflow-hidden transition-all ease-in duration-200`}
     >
       <div>
-        {theme == 'dark' ? (
+        {isDarkMode ? (
           <svg
             viewBox='0 0 24 24'
             fill='none'
