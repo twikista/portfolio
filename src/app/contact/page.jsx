@@ -55,7 +55,7 @@ function Contact() {
                   <CopyIcon style='w-6 h-6 sm:w-5 sm:h-4 hidden sm:inline-block' />
                 </button>
                 {copyStatus && (
-                  <span className='absolute top-[-28px] right-2 text-zinc-200 text-base'>
+                  <span className='absolute top-[-28px] right-2 text-zinc-600 dark:text-zinc-200 text-base'>
                     {copyStatus}
                   </span>
                 )}

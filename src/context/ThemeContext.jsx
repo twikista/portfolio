@@ -10,11 +10,12 @@ function ThemeContextProvider({ children }) {
     if (isDarkMode) {
       document.documentElement.classList.remove('dark')
       localStorage.setItem('theme', null)
+      setIsdarkMode(!isDarkMode)
     } else {
       document.documentElement.classList.add('dark')
       localStorage.setItem('theme', 'dark')
+      setIsdarkMode(!isDarkMode)
     }
-    setIsdarkMode(!isDarkMode)
   }
 
   useEffect(() => {

@@ -7,16 +7,6 @@ import phonenumberinput from '../../public/phone-input.png'
 import portfolio from '../../public/portfolio.jpg'
 
 export const projectData = [
-  // {
-  //   id: 1,
-  //   title: 'Portfolio',
-  //   description:
-  //     'A portfolio website that showcase my projects and provide useful information about me ',
-  //   technologies: ['Nextjs', , 'Tailwind CSS', 'Netlify'],
-  //   imageUrl: portfolio,
-  //   demoUrl: 'https://web-mart.netlify.app/',
-  //   githubUrl: 'https://github.com/twikista/web-shop',
-  // },
   {
     id: 1,
     title: 'Web-Mart',
@@ -36,6 +26,16 @@ export const projectData = [
   },
   {
     id: 2,
+    title: 'Portfolio',
+    description:
+      'A portfolio website that showcase my projects and provide useful information about me ',
+    technologies: ['Nextjs', 'Tailwind CSS', 'Netlify'],
+    imageUrl: portfolio,
+    demoUrl: 'https://aaronanama.netlify.app/',
+    githubUrl: 'https://github.com/twikista/portfolio',
+  },
+  {
+    id: 3,
     title: 'Weda',
     description:
       'A vanilla JavaScript app that leverages the Openweather API to provide current weather details',
@@ -45,7 +45,7 @@ export const projectData = [
     githubUrl: 'https://github.com/twikista/weather-app',
   },
   {
-    id: 3,
+    id: 4,
     title: 'SmartCV',
     description:
       'A protoype of a free online resume builder, with functionality to download generated CV',
@@ -55,7 +55,7 @@ export const projectData = [
     githubUrl: 'https://github.com/twikista/cv-project',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Havilla Restaurant',
     description:
       'A protoype website for a Nigerian Restaurant that list popular Nigerian food',
@@ -65,7 +65,7 @@ export const projectData = [
     githubUrl: 'https://github.com/twikista/Restaurant-Page',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Sketch-Padi',
     description:
       'A browser based sketchpad, that mimics the featurs of Etch-A-Sketch and a sketch pad',
@@ -75,13 +75,13 @@ export const projectData = [
     githubUrl: 'https://github.com/twikista/Etch-a-Sketch',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Phonenumber Input',
     description:
       'A custom Phonenumber input which dispays country code and flag based on country selected',
     technologies: ['React', 'Styled-Components', 'Replit'],
     imageUrl: phonenumberinput,
-    demoUrl: 'https://twikista.github.io/PhoneInputField/',
-    githubUrl: 'https://github.com/twikista/Etch-a-Sketch',
+    demoUrl: 'https://phoneinputfield.twikista.repl.co/',
+    githubUrl: 'https://github.com/twikista/PhoneInputField',
   },
 ]

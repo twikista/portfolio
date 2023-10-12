@@ -26,7 +26,12 @@ function Projects() {
                 className='flex flex-col pb-3 space-y-1 overflow-hidden border border-solid sm:space-y-2 border-zinc-400 dark:border-zinc-600 rounded-xl bg-zinc-700/0'
               >
                 <div className='hidden sm:inline-block w-full h-[200px] object-cover object-center relative'>
-                  <Image src={item.imageUrl} sizes='100vw' alt='thumbnail' />
+                  <Image
+                    src={item.imageUrl}
+                    fill
+                    sizes='100vw'
+                    alt='thumbnail'
+                  />
                   <div className='absolute top-0 bottom-0 left-0 right-0 bg-zinc-900/10' />
                 </div>
                 <div className='flex flex-col justify-between flex-1 h-full px-3 pt-3 sm:gap-2 sm:pt-0'>
